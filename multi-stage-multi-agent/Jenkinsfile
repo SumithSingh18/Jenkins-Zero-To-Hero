@@ -6,7 +6,8 @@ pipeline {
         docker { image 'nginx:latest' }
       }
       steps {
-        sh 'nginx --version'
+        echo "Running NGINX version check........."
+        sh 'nginx -v'
       }
     }
     stage('Front-end') {
